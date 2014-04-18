@@ -1,29 +1,25 @@
 <h1>Books</h1>
 
-<table>
-<table border ="4">
-<table style="width:300px">
-<tr><th>"Title"</th><th>"Author"</th></tr>
-</table>
 
-<ul>
-  <% all_movies = Movie.read %>
-  <% all_movies.each do |movie|  %>
-    <li><%= movie["title"] %> (<%= movie["year"] %>)   </li>
+<table>
+<style>
+table,th,td
+{
+border:1px solid black;
+border-collapse:collapse
+}
+</style>
+<table style="width:800px">
+<tr>
+  <th>Title</th>
+  <th>Author</th>
+</tr>
+<tr>
+  <% all_books = Book.read %>
+  <% all_books.each do |book| %>
+ <tr> <td><%= book["title"] %></td>
+ <td><%= book["author"] %></td>
   <% end %>
-</ul>
-
-<table>
-<table style="border:1px solid black;border-collapse:collapse;">
-<tr>
-<th style="border:1px solid black;">Title</th><th style="border:1px solid black;">Author</th>
-</tr>
-<tr>
-<td style="border:1px solid black;"><%= book["title"] %> </td> <td style="border:1px solid black;"> <%= book["author"] %></td>
-
-<% all_books = Books.read %>
-<% all_books.each do |book| %>
+  </tr>
 </tr>
 </table>
-
-
