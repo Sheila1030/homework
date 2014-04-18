@@ -2,14 +2,10 @@
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
 # Examples:
-Book:
-- title: string
-- author: string
-
-Book.create(:title => "A Brief History of Time", :author => "Stephen Hawking")
-Book.create(:title => "Alice in Wonderland", :author => "Lewis Carroll")
-Book.create(:title => "The Lord Of The Rings", :author => "J.R.R. Tolkien")
-Book.create(:title => "The Hobbit", :author => "J.R.R. Tolkien")
+Book.create("title" => "A Brief History of Time", "author" => "Stephen Hawking")
+Book.create("title" => "Alice in Wonderland", "author" => "Lewis Carroll")
+Book.create("title" => "The Lord Of The Rings", "author" => "J.R.R. Tolkien")
+Book.create("title" => "The Hobbit", "author" => "J.R.R. Tolkien")
 
 
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])

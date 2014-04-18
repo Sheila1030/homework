@@ -1,6 +1,10 @@
 # Example table for a typical Book model.
 #
-# Book:
+#
+Book:
+- title: string
+- author: string
+
 #   - title: string
 #   - price: integer
 #   - author: string
