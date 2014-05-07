@@ -4,6 +4,7 @@
 Book:
 - title: string
 - author: string
+- price: integer
 
 #   - title: string
 #   - price: integer
