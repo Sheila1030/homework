@@ -5,6 +5,16 @@ Book:
 - title: string
 - author: string
 - price: integer
+- avgrating: string
+
+Work:
+- book_id: integer
+- review_id: integer
+
+Review:
+- title: string
+- rating: integer
+- feedback: text
 
 #   - title: string
 #   - price: integer
