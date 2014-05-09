@@ -7,14 +7,11 @@ Book:
 - price: integer
 - avgrating: string
 
-Work:
-- book_id: integer
-- review_id: integer
-
 Review:
 - title: string
 - rating: integer
 - feedback: text
+- book_id: integer
 
 #   - title: string
 #   - price: integer

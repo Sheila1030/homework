@@ -4,9 +4,9 @@
 # Examples:
 
 Book.delete_all
-Book.create("title" => "Orphan Train", "author" => "Christina Baker Kline", "price" => "26", "avgrating" => "3.33")
-Book.create("title" => "Shadow Spell", "author" => "Nora Roberts", "price" => "15", "avgrating" => "3.25")
-Book.create("title" => "The Alchemist", "author" => "Paulo Coelho", "price" => "12", "avgrating" => "3.5")
+ot = Book.create("title" => "Orphan Train", "author" => "Christina Baker Kline", "price" => "26", "avgrating" => "3.33")
+ss = Book.create("title" => "Shadow Spell", "author" => "Nora Roberts", "price" => "15", "avgrating" => "3.25")
+ta = Book.create("title" => "The Alchemist", "author" => "Paulo Coelho", "price" => "12", "avgrating" => "3.5")
 Book.create("title" => "King and Maxwell", "author" => "David Baldacci", "price" => "35", "avgrating" => "")
 Book.create("title" => "Whiskey Beach", "author" => "Nora Roberts", "price" => "22", "avgrating" => "")
 Book.create("title" => "A Game of Thrones", "author" => "George R R Martin", "price" => "24", "avgrating" => "")
@@ -25,17 +25,17 @@ Book.create("title" => "Four Friends", "author" => "Ron Carr", "price" => "20", 
 Book.create("title" => "The White Princess", "author" => "Philippa Gregory", "price" => "24", "avgrating" => "")
 
 Review.delete_all
-Review.create("title" => "Orphan Train", "rating" => "5", "feedback" => "Riveting!")
-Review.create("title" => "Orphan Train", "rating" => "2", "feedback" => "About as dull as you can get.")
-Review.create("title" => "Orphan Train", "rating" => "3", "feedback" => "Not bad.")
-Review.create("title" => "Shadow Spell", "rating" => "4", "feedback" => "Great book, and not too many pages.")
-Review.create("title" => "Shadow Spell", "rating" => "4", "feedback" => "Excellent font and margins. Story wasn't bad either.")
-Review.create("title" => "Shadow Spell", "rating" => "4", "feedback" => "Worth reading when there isn't a hockey game on.")
-Review.create("title" => "Shadow Spell", "rating" => "1", "feedback" => "Didn't understand it at all.")
-Review.create("title" => "The Alchemist", "rating" => "2", "feedback" => "I thought this was about how to make gold?")
-Review.create("title" => "The Alchemist", "rating" => "4", "feedback" => "Suspensful plot, good characters.")
-Review.create("title" => "The Alchemist", "rating" => "5", "feedback" => "Perfect. A work of art.")
-Review.create("title" => "The Alchemist", "rating" => "3", "feedback" => "Kind of confusing.")
+Review.create("title" => "Orphan Train", "rating" => "5", "feedback" => "Riveting!", "book_id" => ot.id)
+Review.create("title" => "Orphan Train", "rating" => "2", "feedback" => "About as dull as you can get.", "book_id" => ot.id)
+Review.create("title" => "Orphan Train", "rating" => "3", "feedback" => "Not bad.", "book_id" => ot.id)
+Review.create("title" => "Shadow Spell", "rating" => "4", "feedback" => "Great book, and not too many pages.", "book_id" => ss.id)
+Review.create("title" => "Shadow Spell", "rating" => "4", "feedback" => "Excellent font and margins. Story wasn't bad either.", "book_id" => ss.id)
+Review.create("title" => "Shadow Spell", "rating" => "4", "feedback" => "Worth reading when there isn't a hockey game on.", "book_id" => ss.id)
+Review.create("title" => "Shadow Spell", "rating" => "1", "feedback" => "Didn't understand it at all.", "book_id" => ss.id)
+Review.create("title" => "The Alchemist", "rating" => "2", "feedback" => "I thought this was about how to make gold?", "book_id" => ta.id)
+Review.create("title" => "The Alchemist", "rating" => "4", "feedback" => "Suspensful plot, good characters.", "book_id" => ta.id)
+Review.create("title" => "The Alchemist", "rating" => "5", "feedback" => "Perfect. A work of art.", "book_id" => ta.id)
+Review.create("title" => "The Alchemist", "rating" => "3", "feedback" => "Kind of confusing.", "book_id" => ta.id)
 
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)

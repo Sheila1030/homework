@@ -5,6 +5,7 @@ Homework::Application.routes.draw do
 get '/dice/roll' => 'dice/roll'
 
 get '/books' => 'books/list'
+get '/books/:book_id' => 'books/show'
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'

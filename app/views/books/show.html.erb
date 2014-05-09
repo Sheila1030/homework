@@ -1,0 +1,26 @@
+<h1>Book Database</h1>
+
+<p>
+  <%= link_to "Books", "/books" %>
+
+</p>
+
+<hr>
+
+<% book_id = params["book_id"] %>
+<% book = Book.read(book_id) %>
+
+<h2><%= book["title"] %> </h2>
+
+<%= image_tag movie["poster_url"] %>
+
+<p><strong>Starring:</strong></p>
+
+<% roles = Role.where("movie_id" => movie["id"]) %>
+
+<ul>
+  <% roles.each do |role| %>
+    <% actor = Actor.find_by("id" => role["actor_id"]) %>
+    <li><%= actor["name"] %> as <%= role["character"] %></li>
+  <% end %>
+</ul>
