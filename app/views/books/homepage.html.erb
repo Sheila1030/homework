@@ -1,0 +1,15 @@
+<h1> Welcome to my Books database! </h1>
+
+<body>
+
+<h2> <em> Check out our Editor's Pick! </em> </h2>
+
+<% editors_pick = Review.group("title").order("avg(rating) desc").first[:title] %>
+
+<h3> <strong> Current Editor's Pick: <%= link_to editors_pick, "/books/#{Book.find_by("title" => editors_pick)[:id]}"  %> </strong> </h3>
+<br>
+
+<%= link_to "Click here to check out all of our books for sale", "/books" %>
+
+</body>
+<end>

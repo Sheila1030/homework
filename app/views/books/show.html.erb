@@ -1,26 +1,51 @@
 <h1>Book Database</h1>
 
 <p>
-  <%= link_to "Books", "/books" %>
-
+  <%= link_to "Books", "books#list" %>
 </p>
 
 <hr>
 
-<% book_id = params["book_id"] %>
-<% book = Book.read(book_id) %>
+<% the_id = params["book_id"] %>
+<% book = Book.read(the_id) %>
 
-<h2><%= book["title"] %> </h2>
+<h3> <strong> Book: </strong> <%= book["title"] %> </h3>
+<h3> <strong> By: </strong> <%= book["author"] %> </h3>
+<br>
 
-<%= image_tag movie["poster_url"] %>
+<body>
 
-<p><strong>Starring:</strong></p>
+  <li> Price: <%= book["price"] %> </li>
 
-<% roles = Role.where("movie_id" => movie["id"]) %>
+<% name = book["title"] %>
 
-<ul>
-  <% roles.each do |role| %>
-    <% actor = Actor.find_by("id" => role["actor_id"]) %>
-    <li><%= actor["name"] %> as <%= role["character"] %></li>
-  <% end %>
-</ul>
+  <li> Average Star Rating: <%= Review.where("title" => name).average("rating") %> </li>
+<br>
+
+<h3> <em> Reviews: </em> </h3>
+
+
+<div class="col-md-6">
+<table class="table table-bordered">
+  <thead>
+  <tr>
+    <th> Star Rating </th>
+    <th> Review </th>
+  </tr>
+  </thead>
+  <tbody>
+
+<% all_reviews = Review.where("title" => book["title"]) %>
+<% all_reviews.each do |review| %>
+
+  <tr>
+    <td> <%= review["rating"] %> </td>
+    <td> <%= review ["review"] %> </li> </td>
+  </tr>
+
+<% end %>
+</tbody>
+</table>
+</div>
+</body>
+
