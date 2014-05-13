@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140509161930) do
+ActiveRecord::Schema.define(version: 20140513022232) do
 
   create_table "books", force: true do |t|
     t.string  "title"
@@ -23,8 +23,8 @@ ActiveRecord::Schema.define(version: 20140509161930) do
   create_table "reviews", force: true do |t|
     t.string  "title"
     t.integer "rating"
-    t.text    "feedback"
     t.integer "book_id"
+    t.string  "feedback"
   end
 
 end

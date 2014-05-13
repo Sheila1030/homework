@@ -10,7 +10,7 @@ Book:
 Review:
 - title: string
 - rating: integer
-- feedback: text
+- feedback: string
 - book_id: integer
 
 #   - title: string

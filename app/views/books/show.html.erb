@@ -1,7 +1,7 @@
 <h1>Book Database</h1>
 
 <p>
-  <%= link_to "Books", "books#list" %>
+<%= link_to "Books", "/books" %>
 </p>
 
 <hr>
@@ -11,7 +11,7 @@
 
 <h3> <strong> Book: </strong> <%= book["title"] %> </h3>
 <h3> <strong> By: </strong> <%= book["author"] %> </h3>
-<br>
+</hr>
 
 <body>
 
@@ -40,7 +40,7 @@
 
   <tr>
     <td> <%= review["rating"] %> </td>
-    <td> <%= review ["review"] %> </li> </td>
+    <td> <%= review ["feedback"] %> </li> </td>
   </tr>
 
 <%= link_to "Go back to list", "/books" %> </td>

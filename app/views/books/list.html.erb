@@ -29,11 +29,14 @@ border-collapse:collapse
   <% all_books.each do |book| %>
 
 
- <tr> <td><%= link_to book["title"], "/books/#{book["book_id"]}" %></td>
+ <tr> <td><%= link_to book["title"], "/books/#{book["id"]}" %></td>
  <td><%= book["author"] %></td>
  <% name = book["title"] %>
  <td><%= Review.where("title" => name).average("rating") %></td>
   <% end %>
   </tr>
+
+
 </tr>
 </table>
+</br>
