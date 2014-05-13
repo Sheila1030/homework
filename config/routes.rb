@@ -9,6 +9,7 @@ get '/books/:book_id' => 'books#show'
 
 get "/" => "books#homepage"
 
+end
 
 
   # You can have the root of your site routed with "root"
@@ -62,4 +63,4 @@ get "/" => "books#homepage"
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
+
